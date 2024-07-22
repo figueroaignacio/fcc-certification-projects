@@ -14,7 +14,7 @@
       <p id="description">
         We would love to know your opinion about our services.
       </p>
-      <form action="" id="survey-form">
+      <form id="survey-form">
         <div>
           <label for="name" id="name-label">Name</label>
           <input type="text" id="name" placeholder="John Doe" required />
@@ -29,8 +29,14 @@
           />
         </div>
         <div>
-          <label for="age" id="number-label">Age</label>
-          <input type="number" id="age" placeholder="Age" />
+          <label for="number" id="number-label">Age (optional)</label>
+          <input
+            type="number"
+            id="number"
+            placeholder="Age"
+            max="70"
+            min="18"
+          />
         </div>
         <div>
           <p>Are you confortable with our services?</p>
@@ -43,15 +49,15 @@
         <div>
           <p>Would you recommend our services to a friend?</p>
           <label>
-            <input type="radio" value="definitely" />
+            <input type="radio" value="definitely" name="user-recommend" />
             Definitely
           </label>
           <label>
-            <input type="radio" value="maybe" />
+            <input type="radio" value="maybe" name="user-recommend" />
             Maybe
           </label>
           <label>
-            <input type="radio" value="not-sure" />
+            <input type="radio" value="not-sure" name="user-recommend" />
             Not sure
           </label>
         </div>
@@ -97,7 +103,7 @@
           <textarea name="suggestions"></textarea>
         </div>
         <div>
-          <button type="submit">Submit</button>
+          <button type="submit" id="submit">Submit</button>
         </div>
       </form>
     </main>
