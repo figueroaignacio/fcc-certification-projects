@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
+
+:root {
+  --bg-color: #efefef;
+  --text-color: rgb(37, 37, 37);
+  --text-foreground: rgba(37, 37, 37, 0.9);
+  --bg-card: rgb(255, 255, 255);
+  --border-color: rgb(203, 203, 203);
+  --font: "Onest", sans-serif;
+  --border-radius: 0.3rem;
+  --primary-color: rgb(114, 15, 114);
+}
+
+html {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-block: 1rem;
+  font-family: var(--font);
+}
+
+p {
+  color: var(--text-foreground);
+}
+
+input {
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: var(--border-radius);
+  outline: none;
+  border: 1px solid var(--border-color);
+  accent-color: var(--primary-color);
+}
+
+select {
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--text-card);
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  width: 100%;
+}
+
+select option[disabled] {
+  color: var(--disabled-color, #999);
+}
+
+textarea {
+  width: 100%;
+  min-height: 10rem;
+  resize: none;
+  form-sizing: content;
+}
+
+i {
+  color: var(--primary-color);
+}
+
+.main {
+  background-color: var(--bg-card);
+  padding: 1rem 1.75rem;
+  box-shadow: 0.25rem 0.6rem 0.6rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.4375rem;
+}
+
+.main__title {
+  font-size: 1.75rem;
+}
+
+.form__data {
+  display: flex;
+  gap: 2rem;
+}
+
+.form__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.form__radios,
+.form__checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.form__suggestions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.form__button {
+  background-color: var(--primary-color);
+  border: none;
+  color: var(--bg-card);
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  transition: filter 0.2s ease;
+  margin-block: 0.5rem;
+}
+
+.form__button:hover {
+  filter: brightness(1.2);
+}
