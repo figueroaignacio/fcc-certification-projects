@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
 
 :root {
-  --bg-color: #efefef;
+  --bg-color: rgb(239, 239, 239);
   --text-color: rgb(37, 37, 37);
   --text-foreground: rgba(37, 37, 37, 0.9);
   --bg-card: rgb(255, 255, 255);
