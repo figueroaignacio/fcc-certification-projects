@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>
       Product Landing Page by Ignacio Figueroa - FCC Responsive Web Design
       Certification
@@ -13,13 +14,11 @@
       <div class="header__brand">
         <img
           src="https://static.vecteezy.com/system/resources/thumbnails/025/399/762/small/programming-coding-icon-logo-design-template-vector.jpg"
-          alt=""
-          width="164px"
-          height="124px"
-          id="header-image"
+          alt="Logo"
+          id="header-img"
           class="header__logo"
         />
-        <!-- <span class="header_brandname">LearnToCode.</span> -->
+        <span class="header__brandname">LTC.org</span>
       </div>
       <nav id="nav-bar" class="header__nav nav">
         <ul class="nav__list">
@@ -40,15 +39,19 @@
     </header>
     <main>
       <section id="hero" class="hero">
-        <h1>Learn to code.</h1>
-        <p>
-          Simple and Modern courses and guides that you can take to improve your
-          tech skills.
-        </p>
-        <a href="#get-started">Get Started</a>
-        <a href="">Explore LearnTC</a>
+        <div>
+          <h1 class="hero__heading">Learn to code.</h1>
+          <p class="hero__description">
+            Simple and Modern courses and guides that you can take to improve
+            your tech skills.
+          </p>
+        </div>
+        <div class="hero__actions">
+          <a href="#get-started" class="hero__button">Get Started</a>
+          <a href="#features" class="hero__button">Explore LTC</a>
+        </div>
       </section>
-      <section id="get-started" class="form">
+      <!-- <section id="get-started" class="form">
         <form id="form" action="https://www.freecodecamp.com/email-submit">
           <div>
             <label for="name">Name</label>
@@ -62,7 +65,7 @@
             <input type="submit" id="submit" />
           </div>
         </form>
-      </section>
+      </section> -->
       <section id="features" class="features">
         <h2 class="features__heading">Features</h2>
         <div class="features__container">
