@@ -70,6 +70,11 @@ i {
   color: var(--primary-color);
 }
 
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
 .main {
   background-color: var(--bg-card);
   padding: 1rem 1.75rem;
