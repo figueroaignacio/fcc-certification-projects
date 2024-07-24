@@ -209,7 +209,7 @@ span {
   font-weight: 800;
 }
 
-@media (width <= 846px) {
+@media (width <= 910px) {
   .features__card:nth-child(1) {
     border-radius: 0.4375rem 0 0 0;
   }
