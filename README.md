@@ -16,7 +16,7 @@ Coding sometimes is hard, but only we need some constancy to understand and give
 
 Yep, as I said, coding is hard. But is magic, wonderful, powerful as well. This passionate world is for those who are curious and self-taught and interested in understanding how the world works nowadays.
 
-At first, you may not feel like a coding expert. But everyone has a starting point, right? Go to your computer and start doing something, it doesn't matter what it is, just write some code. Maybe you're going to be surprised on how talented you are.
+At first, you may not feel like a coding expert. But everyone has a starting point, right? Go to your computer and start doing something, it doesn't matter what it is, just write some code. You might be surprised at how talented you are.
 
 If you're interested to contact me, I'll leave you my social medias below
 
