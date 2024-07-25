@@ -363,6 +363,9 @@ span {
   text-align: center;
   position: relative;
   z-index: -100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .courses__image {
@@ -389,6 +392,14 @@ span {
   padding: 0.5rem;
   border-radius: 0.25rem;
   display: inline-block;
+}
+
+.courses__button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #8a2be2;
+  color: var(--text-color);
+  border-radius: var(--border-radius);
 }
 
 @media (max-width: 768px) {
