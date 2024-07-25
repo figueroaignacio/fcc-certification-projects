@@ -11,8 +11,8 @@ Coding sometimes is hard, but only we need some constancy to understand and give
 - [Survey Form](https://fcc-survey-form-by-ignacio-figueroa.netlify.app)
 - [Tribute Page](https://fcc-tribute-page-by-ignacio-figueroa.netlify.app)
 - [Technical Documentation Page](https://fcc-technical-documentation-page-by-ignacio.netlify.app)
-- [Product Landing Page](https://fcc-technical-documentation-page-by-ignacio.netlify.app)
-- [Personal Portfolio](https://fcc-technical-documentation-page-by-ignacio.netlify.app)
+- [Product Landing Page](https://fcc-product-landing-page-by-ignacio.netlify.app)
+- [Portfolio Website](https://fcc-portfolio-website-by-ignacio.netlify.app)
 
 Yep, as I said, coding is hard. But is magic, wonderful, powerful as well. This passionate world is for those who are curious and self-taught and interested in understanding how the world works nowadays.
 
