@@ -55,21 +55,6 @@
           <a href="#features" class="hero__button">Explore LTC</a>
         </div>
       </section>
-      <!-- <section id="get-started" class="form">
-        <form id="form" action="https://www.freecodecamp.com/email-submit">
-          <div>
-            <label for="name">Name</label>
-            <input type="text" id="name" />
-          </div>
-          <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" required />
-          </div>
-          <div>
-            <input type="submit" id="submit" />
-          </div>
-        </form>
-      </section> -->
       <section id="features" class="features">
         <h2 class="features__heading">Features</h2>
         <div class="features__container">
@@ -104,6 +89,21 @@
             </p>
           </article>
         </div>
+      </section>
+      <section class="video">
+        <h2 class="video__heading">How it works?</h2>
+        <iframe
+          id="video"
+          src="https://www.youtube.com/embed/PkZNo7MFNFg?si=xZ2V0mLp2bJKdlwL"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+        <p class="video__description">
+          Here you have the introduction to programming free course.
+        </p>
       </section>
       <section id="testimonials" class="testimonials">
         <h2 class="testimonials__heading">Testimonials</h2>
@@ -177,36 +177,102 @@
           </article>
         </div>
       </section>
-
       <section id="courses" class="courses">
-        <h2 aria-checked="courses__heading">Prices</h2>
+        <h2 class="courses__heading">Courses</h2>
         <div class="courses__container">
           <article class="courses__card">
+            <img
+              src="https://img.icons8.com/ios/50/000000/html-5.png"
+              alt="HTML5"
+              class="courses__image"
+            />
             <h3 class="courses__title">HTML5</h3>
             <p class="courses__description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis, exercitationem?
+              Learn the fundamentals of HTML5, the standard language for
+              creating web pages. Master the structure and semantics of modern
+              web content.
             </p>
-            <div class="courses__price"><span>50$</span></div>
+            <div class="courses__price"><span>$50</span></div>
           </article>
           <article class="courses__card">
-            <h3 class="courses__title">CSS</h3>
+            <img
+              src="https://img.icons8.com/ios/50/000000/css3.png"
+              alt="CSS"
+              class="courses__image"
+            />
+            <h3 class="courses__title">CSS3</h3>
             <p class="courses__description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ea
-              quod doloribus. Sit, aliquam reiciendis.
+              Dive into CSS3 to style and layout web pages effectively. Learn
+              about advanced styling techniques and responsive design
+              principles.
             </p>
-            <div class="courses__price"><span>100$</span></div>
+            <div class="courses__price"><span>$100</span></div>
           </article>
           <article class="courses__card">
-            <h3 class="courses__title">Javascript</h3>
+            <img
+              src="https://img.icons8.com/ios/50/000000/javascript.png"
+              alt="JavaScript"
+              class="courses__image"
+            />
+            <h3 class="courses__title">JavaScript</h3>
             <p class="courses__description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-              atque mollitia in fugiat reiciendis sunt!
+              Discover JavaScript, the programming language that powers
+              interactive web experiences. Understand core concepts and build
+              dynamic web applications.
             </p>
-            <div class="courses__price"><span>150$</span></div>
+            <div class="courses__price"><span>$150</span></div>
           </article>
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <section id="get-started" class="footer__form">
+        <h2 class="footer__form-heading">Get Started</h2>
+        <form
+          class="footer__form-container"
+          action="https://www.freecodecamp.com/email-submit"
+          id="form"
+        >
+          <div class="footer__form-group">
+            <label for="name" class="footer__form-label">Name</label>
+            <input
+              type="text"
+              id="name"
+              class="footer__form-input"
+              placeholder="Enter your name"
+              name="name"
+            />
+          </div>
+          <div class="footer__form-group">
+            <label for="email" class="footer__form-label">Email</label>
+            <input
+              type="email"
+              id="email"
+              class="footer__form-input"
+              placeholder="Enter your email"
+              name="email"
+              required
+            />
+          </div>
+          <div class="footer__form-group">
+            <input
+              type="submit"
+              id="submit"
+              class="footer__form-submit"
+              value="Subscribe"
+            />
+          </div>
+        </form>
+      </section>
+      <p style="text-align: center; padding-block: 1rem">
+        Developed by
+        <a
+          href="https://ignaciofigueroa.vercel.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Ignacio Figueroa</a
+        >
+      </p>
+    </footer>
   </body>
 </html>
