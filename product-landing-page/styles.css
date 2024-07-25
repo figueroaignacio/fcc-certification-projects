@@ -270,6 +270,10 @@ span {
   margin-bottom: 2rem;
 }
 
+.video__container {
+  margin-block: 5rem;
+}
+
 .video iframe {
   width: 100%;
 }
@@ -344,7 +348,6 @@ span {
   text-align: center;
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 2rem;
 }
 
 .courses__container {
@@ -388,7 +391,6 @@ span {
   font-weight: 700;
   padding: 0.5rem;
   border-radius: 0.25rem;
-  display: inline-block;
 }
 
 .courses__button {
@@ -397,6 +399,8 @@ span {
   background-color: #8a2be2;
   color: var(--text-color);
   border-radius: var(--border-radius);
+  border: none;
+  font-size: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -443,7 +447,8 @@ span {
   padding: 0.75rem;
   border-radius: 0.25rem;
   font-size: 1rem;
-  background-color: transparent;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   border: none;
   outline: none;
   border: var(--border);
@@ -451,11 +456,10 @@ span {
 
 .footer__form-submit {
   background-color: #8a2be2;
-  color: #fff;
+  color: var(--text-color);
   border: none;
   padding: 0.75rem;
   border-radius: 0.25rem;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s;
 }
