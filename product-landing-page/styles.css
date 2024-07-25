@@ -414,7 +414,6 @@ span {
   padding-block: 2rem;
 }
 
-/* Form Section */
 .footer__form {
   max-width: 600px;
   margin: 0 auto;
@@ -447,6 +446,10 @@ span {
   padding: 0.75rem;
   border-radius: 0.25rem;
   font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border: var(--border);
 }
 
 .footer__form-submit {
