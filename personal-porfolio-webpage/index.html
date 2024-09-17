@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <title>
       Personal portfolio webpage by Ignacio Figueroa - FCC Responsive Web Design
       Certification
@@ -12,7 +16,9 @@
   <body>
     <header>
       <nav id="navbar">
-        <ul>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <ul class="nav-links">
           <li>
             <a href="#welcome-section">Home</a>
           </li>
@@ -30,12 +36,15 @@
     </header>
     <main>
       <section id="welcome-section">
-        <h1>Ignacio Figueroa</h1>
-        <h2>Web developer</h2>
-        <p>
-          Specialized in frontend, focused on offering high quality solutions
-          that improve the user experience.
-        </p>
+        <div class="welcome-hero">
+          <h1>Web Developer</h1>
+          <p>
+            Specialized in frontend, focused on offering high-quality solutions
+            that improve the user experience.
+          </p>
+          <a href="#contact" class="welcome-button">Contact me</a>
+        </div>
+        </div>
       </section>
       <section id="about">
         <h2>About me</h2>
