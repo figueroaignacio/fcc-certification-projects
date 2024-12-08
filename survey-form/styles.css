@@ -1,127 +1,150 @@
 @import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
 
 :root {
-  --bg-color: rgb(239, 239, 239);
-  --text-color: rgb(37, 37, 37);
-  --text-foreground: rgba(37, 37, 37, 0.9);
-  --bg-card: rgb(255, 255, 255);
-  --border-color: rgb(203, 203, 203);
+  --background: hsl(212, 24%, 89%);
+  --card: hsl(0, 0%, 100%);
+  --foreground: hsl(210, 5%, 40%);
+  --primary: hsl(210, 50%, 50%);
+  --primary-hover: hsl(210, 50%, 45%);
+  --radius: 0.75rem;
   --font: "Onest", sans-serif;
-  --border-radius: 0.3rem;
-  --primary-color: rgb(114, 15, 114);
+  --shadow: 5px 5px 6px rgba(0, 0, 0, 0.1);
 }
 
-html {
-  padding: 0px;
-  margin: 0px;
+* {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
 body {
-  background-color: var(--bg-color);
+  background-color: var(--background);
+  font-family: var(--font);
+  line-height: 1.5;
+}
+
+main {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  min-height: 100vh;
-  padding-block: 1rem;
-  font-family: var(--font);
+  padding: 2rem;
 }
 
-p {
-  color: var(--text-foreground);
-}
-
-input {
-  padding: 1rem;
-  font-size: 1rem;
-  border-radius: var(--border-radius);
-  outline: none;
-  border: 1px solid var(--border-color);
-  accent-color: var(--primary-color);
-}
-
-select {
-  padding: 1rem;
-  font-size: 1rem;
-  border-radius: var(--border-radius);
-  font-size: 1rem;
-  border: 1px solid var(--border-color);
-  background-color: var(--text-card);
-  appearance: none;
-  outline: none;
-  cursor: pointer;
-  transition: border-color 0.3s, box-shadow 0.3s;
+.form {
+  background-color: var(--card);
+  max-width: 500px;
   width: 100%;
-}
-
-select option[disabled] {
-  color: var(--disabled-color, #999);
-}
-
-textarea {
-  width: 100%;
-  min-height: 10rem;
-  resize: none;
-  form-sizing: content;
-}
-
-i {
-  color: var(--primary-color);
-}
-
-a {
-  text-decoration: none;
-  color: var(--primary-color);
-}
-
-.main {
-  background-color: var(--bg-card);
-  padding: 1rem 1.75rem;
-  box-shadow: 0.25rem 0.6rem 0.6rem rgba(0, 0, 0, 0.1);
-  border-radius: 0.4375rem;
-}
-
-.main__title {
-  font-size: 1.75rem;
-}
-
-.form__data {
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   display: flex;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form__title {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #262626;
+}
+
+.form__description {
+  color: var(--foreground);
+  font-size: 1rem;
 }
 
 .form__item {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  margin-bottom: 0.75rem;
+  gap: 0.5rem;
+}
+
+.form__input,
+.form__select,
+.form__textarea {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--foreground);
+  background-color: var(--card);
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form__input:focus,
+.form__select:focus,
+.form__textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.form__select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23333' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
 }
 
 .form__radios,
 .form__checkboxes {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.5rem;
+}
+
+.form__radios label,
+.form__checkboxes label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
 }
 
 .form__suggestions {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.form__textarea {
+  min-height: 100px;
+  resize: vertical;
 }
 
 .form__button {
-  background-color: var(--primary-color);
+  background-color: var(--primary);
+  color: white;
   border: none;
-  color: var(--bg-card);
-  width: 100%;
   padding: 0.75rem 1.5rem;
-  border-radius: var(--border-radius);
-  transition: filter 0.2s ease;
-  margin-block: 0.5rem;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .form__button:hover {
-  filter: brightness(1.2);
+  background-color: var(--primary-hover);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+}
+
+footer a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .form {
+    padding: 1.5rem;
+  }
 }
