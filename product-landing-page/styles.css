@@ -5,7 +5,7 @@
   --foreground: #f5f6f7;
   --primary: #febe41;
   --secondary: #03031e;
-  --radius: 0.75rem;
+  --radius: 0.5rem;
   --font: "Lato", sans-serif;
 }
 
@@ -94,6 +94,11 @@ main {
   color: var(--primary);
 }
 
+.hero__description {
+  font-size: 1.2rem;
+  max-width: 47.625rem;
+}
+
 .hero__companies {
   display: flex;
   flex-wrap: wrap;
@@ -104,8 +109,14 @@ main {
   background-color: var(--primary);
   font-weight: 600;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   border-radius: var(--radius);
+  cursor: pointer;
+  transition: filter 0.1s ease;
+}
+
+.hero__button:hover {
+  filter: brightness(1.1);
 }
 
 @media (width >= 47.625rem) {
