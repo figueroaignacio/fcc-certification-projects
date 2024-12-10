@@ -5,6 +5,7 @@
   --foreground: #f5f6f7;
   --primary: #febe41;
   --secondary: #03031e;
+  --card: #3b3b4f;
   --radius: 0.5rem;
   --font: "Lato", sans-serif;
 }
@@ -15,6 +16,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -52,6 +54,7 @@ li {
   position: sticky;
   inset: 0;
   padding-inline: 0.5rem;
+  z-index: 100;
 }
 
 .header div {
@@ -84,8 +87,10 @@ li {
 main {
   max-width: 70rem;
   margin-inline: auto;
+  padding-bottom: 2rem;
 }
 
+/* Hero */
 .hero {
   display: flex;
   flex-direction: column;
@@ -128,6 +133,68 @@ main {
   filter: brightness(1.1);
 }
 
+/* Spotlights */
+
+.spotlights__title {
+  margin-bottom: 2rem;
+  font-weight: 808;
+}
+
+.spotlights__box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5rem;
+}
+
+.spotlights__card {
+  background-color: var(--card);
+  border-radius: var(--radius);
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card > div > i {
+  background-color: var(--primary);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.spotlights__card:hover .card__icon-wrapper {
+  transform: scale(1.1);
+}
+
+.card__icon-wrapper i {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.card__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: var(--text);
+}
+
+.card__description {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
 @media (width >= 762px) {
   svg {
     width: 5rem;
@@ -150,5 +217,10 @@ main {
   .hero__companies {
     font-weight: 800;
     gap: 4rem;
+  }
+
+  .spotlights__box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
 }
