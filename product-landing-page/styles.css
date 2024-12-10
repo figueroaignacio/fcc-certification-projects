@@ -28,6 +28,10 @@ svg {
   height: 3rem;
 }
 
+button {
+  font-family: inherit;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -41,6 +45,8 @@ li {
   padding-inline: 0.75rem;
 }
 
+/* Header */
+
 .header {
   background-color: var(--secondary);
   position: sticky;
@@ -52,8 +58,9 @@ li {
   margin-inline: auto;
   display: flex;
   align-items: center;
-  max-width: 80rem;
+  max-width: 100rem;
   word-break: keep-all;
+  gap: 1rem;
 }
 
 .header__logo {
@@ -72,8 +79,10 @@ li {
   color: var(--primary);
 }
 
+/* Main */
+
 main {
-  max-width: 80rem;
+  max-width: 70rem;
   margin-inline: auto;
 }
 
@@ -119,7 +128,16 @@ main {
   filter: brightness(1.1);
 }
 
-@media (width >= 47.625rem) {
+@media (width >= 762px) {
+  svg {
+    width: 5rem;
+    height: 5rem;
+  }
+  .nav__list {
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
   .hero {
     justify-content: center;
   }
