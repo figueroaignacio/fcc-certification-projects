@@ -21,7 +21,7 @@
         <img
           src="https://play-lh.googleusercontent.com/MoaYYQjGtmGLhG9HbjCDKyj44kwHj1HfbCI2Am70elRm35vJ-u4y4X5uEJjP97MAAsU"
           alt="FreeCodeCamp Logo"
-          id="logo"
+          id="header-img"
           class="header__logo"
         />
         <nav id="nav-bar" class="header__nav nav">
@@ -265,6 +265,23 @@
           </div>
         </div>
       </section>
+      <section class="video">
+        <h2 class="video__title">
+          Here you have one of our most popular course
+        </h2>
+        <iframe
+          src="https://www.youtube.com/embed/PkZNo7MFNFg?si=XjgLy03q5LJWqyjn"
+          title="YouTube video player"
+          id="video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+        <a href="https://www.youtube.com/@freecodecamp" target="_blank"
+          >Go to freeCodeCamp YouTube Channel</a
+        >
+      </section>
       <section id="testimonials" class="testimonials">
         <h2 class="testimonials__title">
           Here is what our alumni say about freeCodeCamp:
@@ -435,6 +452,63 @@
     </main>
 
     <!-- Footer -->
-    <footer></footer>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__content">
+          <div class="footer__branding">
+            <i class="fa-brands fa-free-code-camp footer__icon"></i>
+            <p class="footer__name">freeCodeCamp</p>
+          </div>
+          <p class="footer__description">
+            FreeCodeCamp is a nonprofit organization that offers free coding
+            education and resources to help people learn programming and web
+            development skills. It provides interactive coding lessons,
+            tutorials, certifications, and a supportive community for beginners
+            and advanced learners alike. The platform covers topics like HTML,
+            CSS, JavaScript, data structures, algorithms, and more, helping
+            users build real-world projects as they learn.
+          </p>
+          <p class="footer__note">
+            This project is a course assignment created for educational
+            purposes, showcasing the application of key concepts and
+            technologies learned throughout the course.
+          </p>
+        </div>
+        <form
+          class="footer__form"
+          id="form"
+          action="https://www.freecodecamp.com/email-submit"
+        >
+          <label for="email" class="footer__form-label"
+            >Subscribe to our newsletter</label
+          >
+          <div class="footer__form-group">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="footer__form-input"
+              placeholder="Enter your email"
+              required
+            />
+            <input
+              type="name"
+              id="name"
+              name="name"
+              class="footer__form-input"
+              placeholder="Enter your name"
+              required
+            />
+            <input id="submit" type="submit" class="footer__form-button" />
+          </div>
+        </form>
+      </div>
+      <p class="footer__developer">
+        Developed by
+        <a href="https://ignaciofigueroa.vercel.app" target="_blank"
+          >Ignacio Figueroa</a
+        >
+      </p>
+    </footer>
   </body>
 </html>

@@ -60,7 +60,7 @@ li {
   background-color: var(--secondary);
   position: sticky;
   inset: 0;
-  padding-inline: 0.5rem;
+  padding-inline: 1.25rem;
   z-index: 100;
 }
 
@@ -193,11 +193,27 @@ main {
   line-height: 1.5;
 }
 
+.video iframe {
+  width: 100%;
+  height: 70dvh;
+  border-radius: var(--radius);
+}
+
+.video__title {
+  margin-bottom: 2rem;
+  font-weight: 800;
+}
+
+.video a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
 /* Testimonials */
 
 .testimonials__title {
   margin-bottom: 2rem;
-  font-weight: 808;
+  font-weight: 800;
 }
 
 .testimonials__box {
@@ -301,6 +317,102 @@ main {
   filter: brightness(1.1);
 }
 
+/* Footer */
+.footer {
+  background-color: var(--secondary);
+  color: #fff;
+  padding: 2rem;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer__content {
+  flex: 1;
+  max-width: 60%;
+}
+
+.footer__branding {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.footer__icon {
+  font-size: 4rem;
+  margin-right: 0.625rem;
+}
+
+.footer__name {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.footer__description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.footer__note {
+  font-size: 12px;
+  color: #ccc;
+  margin-top: 1rem;
+}
+
+.footer__developer {
+  margin-top: 1rem;
+}
+
+.footer__developer > a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.footer__form {
+  flex: 1;
+  max-width: 30%;
+}
+
+.footer__form-label {
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.footer__form-group {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer__form-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.footer__form-button {
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.footer__form-button:hover {
+  filter: brightness(1.1);
+}
+
 @media (width >= 762px) {
   svg {
     width: 5rem;
@@ -338,5 +450,17 @@ main {
 
   .testimonial__text {
     max-width: 762px;
+  }
+}
+
+@media (width <= 768px) {
+  .footer__content,
+  .footer__form {
+    max-width: 100%;
+  }
+
+  .footer__form-input,
+  .footer__form-button {
+    width: 100%;
   }
 }
