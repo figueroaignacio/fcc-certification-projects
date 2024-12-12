@@ -1,0 +1,166 @@
+:root {
+  --background: #f2f5f7;
+  --foreground: #252525;
+  --text: #29303d;
+  --muted: #626265;
+  --primary: #235a97;
+  --border: #d6d2c4;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  font-family: "Arial", sans-serif;
+  line-height: 1.9;
+}
+
+li,
+a {
+  text-decoration: none;
+  color: inherit;
+  list-style: none;
+}
+
+p,
+li {
+  color: var(--muted);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text);
+}
+
+pre {
+  padding: 0;
+  margin: 0;
+  background: var(--text);
+  border-radius: 12px;
+  overflow: scroll;
+}
+
+code {
+  padding: 0;
+  font-family: Consolas, monaco, monospace;
+  font-size: 0.9em;
+}
+
+.container {
+  padding: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin: 0.75rem 0;
+}
+
+.description {
+  margin-bottom: 1.5rem;
+}
+
+.list > li {
+  list-style: disc;
+  margin-left: 2rem;
+}
+
+.nav {
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem;
+  min-height: 30dvh;
+}
+
+.nav__title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.nav__list {
+  margin-top: 2rem;
+}
+
+.nav__list > li {
+  margin-bottom: 1rem;
+}
+
+.nav__list > li > a {
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--foreground);
+}
+
+.nav__sublist {
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.nav__sublist > li > a {
+  font-size: 0.9rem;
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+.nav__sublist > li > a:hover {
+  text-decoration: underline;
+}
+
+main {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero__title {
+  font-size: 2.5rem;
+}
+
+.hero__description {
+  max-width: 47.625rem;
+}
+
+@media (width >= 1024px) {
+  body {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .container {
+    padding: 1rem 3rem;
+  }
+
+  main {
+    grid-column: span 10;
+  }
+
+  .nav {
+    grid-column: span 2;
+    border-right: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+    overflow-y: auto;
+  }
+}

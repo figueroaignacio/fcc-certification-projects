@@ -4,7 +4,248 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <meta
+      name="description"
+      content="TypeScript is a strongly typed programming language that builds on JavaScript, adding optional static types. It is widely used for developing large-scale applications, ensuring code quality, and reducing bugs."
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+    <title>
+      Technical Web Documentation by Ignacio Figueroa - FCC Responsive Web
+      Design Certification
+    </title>
   </head>
-  <body></body>
+  <body>
+    <nav class="nav">
+      <header class="nav__header">
+        <span class="nav__title">Mini TS Docs</span>
+      </header>
+      <ul class="nav__list">
+        <li>
+          <a href="#introduction">Introduction</a>
+          <ul class="nav__sublist">
+            <li><a href="#what_is_typescript">What is TypeScript?</a></li>
+            <li>
+              <a href="#typescript_vs_javascript">TypeScript vs JavaScript</a>
+            </li>
+            <li>
+              <a href="#benefits_of_typescript">Benefits of TypeScript</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#typescript_features">Features</a>
+          <ul class="nav__sublist">
+            <li><a href="#static_typing">Static Typing</a></li>
+            <li><a href="#interfaces">Interfaces</a></li>
+            <li><a href="#type_aliases">Type Aliases</a></li>
+            <li><a href="#generics">Generics</a></li>
+            <li><a href="#enums">Enums</a></li>
+            <li><a href="#type_assertions">Type Assertions</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#typescript_types">Types</a>
+          <ul class="nav__sublist">
+            <li><a href="#primitive_types">Primitive Types</a></li>
+            <li><a href="#interfaces">Arrays</a></li>
+            <li><a href="#type_aliases">Tuples</a></li>
+            <li><a href="#generics">Any</a></li>
+            <li><a href="#enums">Void</a></li>
+          </ul>
+        </li>
+        <li><a href="#compilation">Compilation</a></li>
+        <li><a href="#advanced-concepts">Advanced Concepts</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-doc" class="container">
+      <section class="main-section">
+        <header id="introduction">
+          <h2 class="title">Introduction</h2>
+        </header>
+        <h3 class="subtitle" id="what_is_typescript">What is TypeScript?</h3>
+        <p>
+          TypeScript is a superset of JavaScript that introduces optional static
+          typing, interfaces, and other advanced features to enhance
+          development. It compiles down to plain JavaScript, ensuring
+          compatibility with all JavaScript environments.
+        </p>
+        <h3 class="subtitle" id="typescript_vs_javascript">
+          Differences Between TypeScript and JavaScript
+        </h3>
+        <ul class="list">
+          <li>
+            Static Typing: TypeScript allows defining types, while JavaScript is
+            dynamically typed.
+          </li>
+          <li>
+            Error Checking: TypeScript catches type-related errors during
+            compile time, whereas JavaScript errors occur at runtime.
+          </li>
+          <li>
+            Advanced Features: TypeScript includes interfaces, generics, and
+            enums that JavaScript lacks.
+          </li>
+          <li>
+            Tooling: TypeScript improves IDE support with better autocomplete,
+            navigation, and refactoring.
+          </li>
+        </ul>
+        <h3 id="benefits_of_typescript" class="subtitle">
+          Benefits of Using TypeScript
+        </h3>
+        <ul class="list">
+          <li>
+            Error Prevention: TypeScript catches errors at compile time,
+            reducing runtime bugs.
+          </li>
+          <li>
+            Improved Readability: With type annotations, code becomes easier to
+            understand and maintain.
+          </li>
+          <li>
+            Scalability: TypeScript's features make it easier to manage large
+            codebases.
+          </li>
+          <li>
+            IDE Support: Enhanced tooling for autocompletion, refactoring, and
+            navigation.
+          </li>
+          <li>
+            Compatibility: Works with existing JavaScript libraries and code.
+          </li>
+        </ul>
+      </section>
+      <section class="main-section">
+        <header id="typescript_features">
+          <h2 class="title">TypeScript Features</h2>
+        </header>
+        <h3 id="static_typing" class="subtitle">Static Typing</h3>
+        <p class="description">
+          TypeScript allows you to define types for variables, function
+          parameters, and return values.
+        </p>
+        <span>Example:</span>
+        <pre>
+            <code class="language-javascript"> 
+              let age: number = 25; 
+              let name: string = "John"; 
+            </code>
+        </pre>
+        <h3 id="interfaces" class="subtitle">Interfaces</h3>
+        <p class="description">Interfaces define the structure of an object.</p>
+        <span>Example:</span>
+        <pre>
+            <code class="language-javascript"> 
+              interface User {
+                name: string;
+                age: number;
+              }
+              
+              const user: User = {
+                name: "Alice",
+                age: 30
+              };
+            </code>
+        </pre>
+        <h3 id="type_aliases" class="subtitle">Type Aliases</h3>
+        <p class="description">
+          Use type aliases to give a custom name to a type.
+        </p>
+        <span>Example:</span>
+        <pre>
+          <code class="language-javascript"> 
+            type ID = string | number;
+            let userId: ID = "123ABC";
+          </code>
+        </pre>
+        <h3 id="generics" class="subtitle">Generics</h3>
+        <p class="description">
+          Generics enable types to be used as parameters in classes, functions,
+          and interfaces.
+        </p>
+        <span>Example</span>
+        <pre>
+          <code class="language-javascript"> 
+            function identity<T>(value: T): T {
+              return value;
+            }
+            
+            let num = identity<number>(5);
+            let str = identity<string>("hello");
+          </code>
+        </pre>
+        <h3 id="enums" class="subtitle">Enums</h3>
+        <p class="description">Enums define a set of named constants.</p>
+        <span>Example</span>
+        <pre>
+          <code class="language-javascript"> 
+            enum Direction {
+              Up,
+              Down,
+              Left,
+              Right
+            }
+            
+            let move: Direction = Direction.Up;
+          </code>
+        </pre>
+        <h3 id="type_assertions" class="subtitle">
+          Type Assertions
+        </h3>
+        <p class="description">Use type assertions to tell TypeScript the exact type of a variable.</p>
+        <span>Example:</span>
+        <pre>
+          <code class="language-javascript"> 
+            let value: any = "hello";
+            let strLength: number = (value as string).length;
+          </code>
+        </pre>
+      </section>
+      <section class="main-section">
+        <header id="typescript_types">
+          <h2 class="title">TypeScript Types</h2>
+        </header>
+        <h3 id="primitive_types" class="subtitle">Primitive Types</h3>
+        <div>
+          <p class="description">string: Represents text.</p>
+          <pre>
+            <code class="language-javascript"> 
+              let age: number = 25; 
+              let name: string = "John"; 
+            </code>
+          </pre>
+          <p class="description">number: Represents integers and floating-point numbers.</p>
+          <pre>
+            <code class="language-javascript"> 
+              let pi: number = 3.14;
+            </code>
+          </pre>
+          <p class="description">boolean: Represents true or false.</p>
+          <pre>
+            <code class="language-javascript"> 
+              let isActive: boolean = true;
+            </code>
+          </pre>
+          <p class="description">null & undefined: Represent absence of a value.</p>
+          <pre>
+            <code class="language-javascript"> 
+              let data: null = null;
+              let id: undefined = undefined;  
+            </code>
+          </pre>
+        </div>
+        <h3 id="arrays" class="subtitle">Arrays</h3>
+        <p>Arrays can hold multiple values of a single type.</p>
+        <pre>
+          <code class="language-javascript"> 
+            let numbers: number[] = [1, 2, 3];
+          </code>
+        </pre>
+      </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
 </html>
