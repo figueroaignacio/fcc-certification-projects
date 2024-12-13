@@ -10,7 +10,7 @@ Coding sometimes is hard, but only we need some constancy to understand and give
 
 - [Survey Form](https://fcc-survey-form-by-ignacio-figueroa.netlify.app)
 - [Tribute Page](https://fcc-tribute-page-by-ignacio-figueroa.netlify.app)
-- [Technical Documentation Page](https://fcc-technical-documentation-page-by-ignacio.netlify.app)
+- [Technical Documentation Page](https://fcc-technical-web-docs-by-ignacio.netlify.app)
 - [Product Landing Page](https://fcc-product-landing-page-by-ignacio.netlify.app)
 - [Portfolio Website](https://fcc-portfolio-website-by-ignacio.netlify.app)
 
