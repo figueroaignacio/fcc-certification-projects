@@ -2,40 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css"
+      rel="stylesheet"
+    />
     <meta
       name="description"
       content="TypeScript is a strongly typed programming language that builds on JavaScript, adding optional static types. It is widely used for developing large-scale applications, ensuring code quality, and reducing bugs."
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css"
+    />
     <title>
       Technical Web Documentation by Ignacio Figueroa - FCC Responsive Web
       Design Certification
     </title>
   </head>
   <body>
-    <nav class="nav">
+    
+    <nav class="nav" id="navbar" role="navigation" aria-label="Main Navigation">
       <header class="nav__header">
         <span class="nav__title">Mini TS Docs</span>
       </header>
-      <ul class="nav__list">
+      <ul class="nav__list" aria-label="Main Menu">
         <li>
-          <a href="#introduction">Introduction</a>
-          <ul class="nav__sublist">
+          <a href="#introduction" class="nav-link" aria-label="Introduction Section">Introduction</a>
+          <ul class="nav__sublist" aria-label="Introduction Submenu">
             <li><a href="#what_is_typescript">What is TypeScript?</a></li>
-            <li>
-              <a href="#typescript_vs_javascript">TypeScript vs JavaScript</a>
-            </li>
-            <li>
-              <a href="#benefits_of_typescript">Benefits of TypeScript</a>
-            </li>
+            <li><a href="#typescript_vs_javascript">TypeScript vs JavaScript</a></li>
+            <li><a href="#benefits_of_typescript">Benefits of TypeScript</a></li>
           </ul>
         </li>
         <li>
-          <a href="#typescript_features">Features</a>
-          <ul class="nav__sublist">
+          <a href="#features" class="nav-link" aria-label="Features Section">Features</a>
+          <ul class="nav__sublist" aria-label="Features Submenu">
             <li><a href="#static_typing">Static Typing</a></li>
             <li><a href="#interfaces">Interfaces</a></li>
             <li><a href="#type_aliases">Type Aliases</a></li>
@@ -45,24 +48,31 @@
           </ul>
         </li>
         <li>
-          <a href="#typescript_types">Types</a>
-          <ul class="nav__sublist">
+          <a href="#types" class="nav-link" aria-label="Types Section">Types</a>
+          <ul class="nav__sublist" aria-label="Types Submenu">
             <li><a href="#primitive_types">Primitive Types</a></li>
-            <li><a href="#interfaces">Arrays</a></li>
-            <li><a href="#type_aliases">Tuples</a></li>
-            <li><a href="#generics">Any</a></li>
-            <li><a href="#enums">Void</a></li>
+            <li><a href="#arrays">Arrays</a></li>
+            <li><a href="#tuples">Tuples</a></li>
+            <li><a href="#any">Any</a></li>
+            <li><a href="#void">Void</a></li>
           </ul>
         </li>
-        <li><a href="#compilation">Compilation</a></li>
-        <li><a href="#advanced-concepts">Advanced Concepts</a></li>
+        <li>
+          <a href="#compilation" class="nav-link" aria-label="Compilation Section">Compilation</a>
+          <ul class="nav__sublist" aria-label="Compilation Submenu">
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#compiling_code">Compiling Code</a></li>
+            <li><a href="#typescript_configuration">TypeScript Configuration</a></li>
+          </ul>
+        </li>
+        <li><a href="#conclusion" class="nav-link" aria-label="Conclusion Section">Conclusion</a></li>
       </ul>
     </nav>
 
-    <main id="main-doc" class="container">
-      <section class="main-section">
-        <header id="introduction">
-          <h2 class="title">Introduction</h2>
+    <main id="main-doc" class="container" role="main">
+      <section class="main-section" id="introduction">
+        <header class="title">
+          <h1>Introduction</h1>
         </header>
         <h3 class="subtitle" id="what_is_typescript">What is TypeScript?</h3>
         <p>
@@ -117,9 +127,10 @@
           </li>
         </ul>
       </section>
-      <section class="main-section">
-        <header id="typescript_features">
-          <h2 class="title">TypeScript Features</h2>
+
+      <section class="main-section" id="features">
+        <header class="title">
+          <h1>Features</h1>
         </header>
         <h3 id="static_typing" class="subtitle">Static Typing</h3>
         <p class="description">
@@ -128,26 +139,26 @@
         </p>
         <span>Example:</span>
         <pre>
-            <code class="language-javascript"> 
-              let age: number = 25; 
-              let name: string = "John"; 
-            </code>
+          <code class="language-javascript">
+            let age: number = 25;
+            let name: string = "John";
+          </code>
         </pre>
         <h3 id="interfaces" class="subtitle">Interfaces</h3>
         <p class="description">Interfaces define the structure of an object.</p>
         <span>Example:</span>
         <pre>
-            <code class="language-javascript"> 
-              interface User {
-                name: string;
-                age: number;
-              }
-              
-              const user: User = {
-                name: "Alice",
-                age: 30
-              };
-            </code>
+          <code class="language-javascript">
+            interface User {
+              name: string;
+              age: number;
+            }
+
+            const user: User = {
+              name: "Alice",
+              age: 30
+            };
+          </code>
         </pre>
         <h3 id="type_aliases" class="subtitle">Type Aliases</h3>
         <p class="description">
@@ -155,7 +166,7 @@
         </p>
         <span>Example:</span>
         <pre>
-          <code class="language-javascript"> 
+          <code class="language-javascript">
             type ID = string | number;
             let userId: ID = "123ABC";
           </code>
@@ -167,11 +178,11 @@
         </p>
         <span>Example</span>
         <pre>
-          <code class="language-javascript"> 
+          <code class="language-javascript">
             function identity<T>(value: T): T {
               return value;
             }
-            
+
             let num = identity<number>(5);
             let str = identity<string>("hello");
           </code>
@@ -180,14 +191,14 @@
         <p class="description">Enums define a set of named constants.</p>
         <span>Example</span>
         <pre>
-          <code class="language-javascript"> 
+          <code class="language-javascript">
             enum Direction {
               Up,
               Down,
               Left,
               Right
             }
-            
+
             let move: Direction = Direction.Up;
           </code>
         </pre>
@@ -197,53 +208,112 @@
         <p class="description">Use type assertions to tell TypeScript the exact type of a variable.</p>
         <span>Example:</span>
         <pre>
-          <code class="language-javascript"> 
+          <code class="language-javascript">
             let value: any = "hello";
             let strLength: number = (value as string).length;
           </code>
         </pre>
       </section>
-      <section class="main-section">
-        <header id="typescript_types">
-          <h2 class="title">TypeScript Types</h2>
+
+      <section class="main-section" id="types">
+        <header class="title">
+          <h1>Types</h1>
         </header>
         <h3 id="primitive_types" class="subtitle">Primitive Types</h3>
         <div>
           <p class="description">string: Represents text.</p>
           <pre>
-            <code class="language-javascript"> 
-              let age: number = 25; 
-              let name: string = "John"; 
+            <code class="language-javascript">
+              let age: number = 25;
+              let name: string = "John";
             </code>
           </pre>
           <p class="description">number: Represents integers and floating-point numbers.</p>
-          <pre>
-            <code class="language-javascript"> 
-              let pi: number = 3.14;
-            </code>
-          </pre>
-          <p class="description">boolean: Represents true or false.</p>
-          <pre>
-            <code class="language-javascript"> 
-              let isActive: boolean = true;
-            </code>
-          </pre>
-          <p class="description">null & undefined: Represent absence of a value.</p>
-          <pre>
-            <code class="language-javascript"> 
-              let data: null = null;
-              let id: undefined = undefined;  
-            </code>
-          </pre>
         </div>
         <h3 id="arrays" class="subtitle">Arrays</h3>
-        <p>Arrays can hold multiple values of a single type.</p>
+        <p class="description">Arrays store multiple values in a single variable.</p>
         <pre>
-          <code class="language-javascript"> 
-            let numbers: number[] = [1, 2, 3];
+          <code class="language-javascript">
+            let numbers: number[] = [1, 2, 3, 4];
+            let names: string[] = ["John", "Alice", "Bob"];
+          </code>
+        </pre>
+        <h3 id="tuples" class="subtitle">Tuples</h3>
+        <p class="description">Tuples are arrays with fixed types and length.</p>
+        <pre>
+          <code class="language-javascript">
+            let person: [string, number] = ["Alice", 25];
+          </code>
+        </pre>
+        <h3 id="any" class="subtitle">Any</h3>
+        <p class="description">any allows any type (use sparingly).</p>
+        <pre>
+          <code class="language-javascript">
+            let data: any = "hello";
+            data = 42;
+            data = true;
+          </code>
+        </pre>
+        <h3 id="void" class="subtitle">Void</h3>
+        <p class="description">
+          void represents the absence of a value (commonly used for function
+          return types).
+        </p>
+      </section>
+
+      <section class="main-section" id="compilation">
+        <header class="title">
+          <h1>Compilation</h1>
+        </header>
+        <h3 id="installation" class="subtitle">Installation</h3>
+        <p>
+          To use TypeScript, install it globally or locally via npm:
+        </p>
+        <pre>
+          <code class="language-bash">
+            npm install -g typescript
+          </code>
+        </pre>
+        <h3 id="compiling_code" class="subtitle">Compiling Code</h3>
+        <p>Use the following command to compile TypeScript to JavaScript:</p>
+        <pre>
+          <code class="language-bash">
+            tsc
+          </code>
+        </pre>
+        <h3 id="typescript_configuration" class="subtitle">
+          TypeScript Configuration
+        </h3>
+        <p>
+          The `tsconfig.json` file allows configuring various compiler options.
+        </p>
+        <pre>
+          <code class="language-json">
+            {
+              "compilerOptions": {
+                "target": "es6",
+                "module": "commonjs",
+                "strict": true
+              }
+            }
           </code>
         </pre>
       </section>
+
+      <section class="main-section" id="conclusion">
+        <header class="title">
+          <h1>Conclusion</h1>
+        </header>
+        <p>
+          TypeScript provides valuable features for building large-scale and
+          error-free applications. By integrating static types and interfaces,
+          developers can create more maintainable, readable, and error-resistant
+          code.
+        </p>
+      </section>
+      <footer>
+        <p>Developed by <a href="https://ignaciofigueroa.vercel.app">Ignacio Figueroa</a></p>
+      </footer>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
