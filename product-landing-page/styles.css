@@ -333,7 +333,6 @@ main {
 }
 
 .footer__content {
-  flex: 1;
   max-width: 60%;
 }
 
@@ -457,10 +456,5 @@ main {
   .footer__content,
   .footer__form {
     max-width: 100%;
-  }
-
-  .footer__form-input,
-  .footer__form-button {
-    width: 100%;
   }
 }
