@@ -2,103 +2,195 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles.css" />
     <title>
-      Personal portfolio webpage by Ignacio Figueroa - FCC Responsive Web Design
-      Certification
+      Tribute Page by Ignacio Figueroa - FCC Responsive Web Design Certification
     </title>
   </head>
   <body>
-    <header>
-      <nav id="navbar">
-        <input type="checkbox" id="menu-toggle" />
-        <label for="menu-toggle" class="hamburger">&#9776;</label>
-        <ul class="nav-links">
+    <nav id="navbar" class="header__nav nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#about" class="nav__link">About</a>
+        </li>
+        <li class="nav__item">
+          <a href="#projects" class="nav__link">Projects</a>
+        </li>
+        <li class="nav__item">
+          <a href="#skills" class="nav__link">Skills</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="welcome-section" class="hero">
+        <div>
+          <h1 class="hero__title">Ignacio Figueroa</h1>
+          <h2 class="hero__subtitle">
+            Web Developer specialized in Frontend Development
+          </h2>
+        </div>
+        <div class="hero__location">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Buenos Aires, Argentina</span>
+        </div>
+        <ul class="hero__contacts">
           <li>
-            <a href="#welcome-section">Home</a>
+            <a
+              href="https://github.com/figueroaignacio"
+              target="_blank"
+              id="profile-link"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
           </li>
           <li>
-            <a href="#about">About</a>
+            <a
+              href="https://www.linkedin.com/in/figueroa-ignacio"
+              target="_blank"
+              id="profile-link"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
           </li>
           <li>
-            <a href="#projects">Projects</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
+            <a href="mailto:ignaciofigueroadev@gmail.com" target="_blank">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
           </li>
         </ul>
-      </nav>
-    </header>
-    <main>
-      <section id="welcome-section">
-        <div class="welcome-hero">
-          <h1>Web Developer</h1>
-          <p>
-            Specialized in frontend, focused on offering high-quality solutions
-            that improve the user experience.
+      </section>
+      <section id="about" class="about">
+        <h2 class="about__title">About me</h2>
+        <div class="about__container">
+          <p class="about__description">
+            👋 Hi, I'm Ignacio, a Web Developer specializing in Frontend
+            Development, with a focus on creating technological experiences that
+            build meaningful connections with users.
           </p>
-          <a href="#contact" class="welcome-button">Contact me</a>
-        </div>
-        </div>
-      </section>
-      <section id="about">
-        <h2>About me</h2>
-        <p>
-          I've been deeply involved in the web ecosystem for nearly two years,
-          focusing on frontend development. I'm passionate about creating
-          outstanding user interfaces, always eager to learn, and staying up to
-          date with the latest web technologies.
-        </p>
-      </section>
-      <section id="projects">
-        <div>
-          <h3 class="project-tile">Survey Form</h3>
-          <p></p>
-          <div>
-            <a href="">Source Code</a>
-            <a href="">Live Site</a>
-          </div>
-        </div>
-        <div>
-          <h3 class="project-tile">Tribute Page</h3>
-          <p></p>
-          <div>
-            <a href="">Source Code</a>
-            <a href="">Live Site</a>
-          </div>
-        </div>
-        <div>
-          <h3 class="project-tile">Technical Web Documentation</h3>
-          <p></p>
-          <div>
-            <a href="">Source Code</a>
-            <a href="">Live Site</a>
-          </div>
-        </div>
-        <div>
-          <h3 class="project-tile">Product Landing Page</h3>
-          <p></p>
-          <div>
-            <a href="">Source Code</a>
-            <a href="">Live Site</a>
-          </div>
+          <p class="about__description">
+            I am passionate about challenging projects. I strongly believe in
+            continuous learning and creating projects with real impact.
+          </p>
+          <p class="about__description">
+            I am driven by collaborating with diverse teams and developing
+            innovative products that deliver meaningful results. I am always
+            looking for challenges that allow me to keep growing and contribute
+            to the advancement of the tech world.
+          </p>
         </div>
       </section>
-      <section id="contact">
-        <a href="https://github.com/figueroaignacio" target="_blank">Github</a>
-        <a
-          href="https://www.linkedin.com/in/ignacio-figueroa-0a1ba0263/"
-          target="_blank"
-          id="profile-link"
-          >LinkedIn</a
-        >
+      <section id="projects" class="projects">
+        <h2 class="projects__title">Projects</h2>
+        <div class="projects__container">
+          <div class="projects__card project">
+            <i class="fa-solid fa-folder"></i>
+            <div>
+              <h3 class="project__title project-tile">
+                <a
+                  href="https://fcc-survey-form-by-ignacio-figueroa.netlify.app/"
+                  target="_blank"
+                  >Survey Form</a
+                >
+              </h3>
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+            <p class="project__description">
+              A responsive survey form designed to collect user feedback on
+              various services with a clean and modern interface.
+            </p>
+          </div>
+          <div class="projects__card project">
+            <i class="fa-solid fa-folder"></i>
+            <div>
+              <h3 class="project__title project-tile">
+                <a
+                  href="https://fcc-tribute-page-by-ignacio.netlify.app/"
+                  target="_blank"
+                  >Tribute Page</a
+                >
+              </h3>
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+            <p class="project__description">
+              A tribute page dedicated to Linus Torvalds, showcasing key
+              milestones and achievements from his life and career.
+            </p>
+          </div>
+          <div class="projects__card project">
+            <i class="fa-solid fa-folder"></i>
+            <div>
+              <h3 class="project__title project-tile">
+                <a
+                  href="https://fcc-product-landing-page-by-ignacio.netlify.app/"
+                  target="_blank"
+                  >Product Landing Page</a
+                >
+              </h3>
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+            <p class="project__description">
+              A captivating product landing page inspired by freeCodeCamp,
+              highlighting features and benefits to engage users.
+            </p>
+          </div>
+          <div class="projects__card project">
+            <i class="fa-solid fa-folder"></i>
+            <div>
+              <h3 class="project__title project-tile">
+                <a
+                  href="https://fcc-technical-web-docs-by-ignacio.netlify.app/"
+                  target="_blank"
+                  >Technical Web Documentation</a
+                >
+              </h3>
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+            <p class="project__description">
+              A concise and structured technical documentation for TypeScript,
+              perfect for beginners and advanced users alike.
+            </p>
+          </div>
+        </div>
       </section>
     </main>
-    <footer></footer>
+    <footer class="footer">
+      <div class="footer__content">
+        <h2 class="footer__title">Ignacio Figueroa</h2>
+        <h3 class="footer__subtitle">Web Developer</h3>
+        <p class="footer__text">
+          Thank you for visiting my portfolio. I look forward to connecting with
+          you and discussing future projects.
+        </p>
+      </div>
+      <div class="footer__socials">
+        <a
+          href="https://linkedin.com/in/ignacio"
+          target="_blank"
+          class="footer__social-link"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a
+          href="https://github.com/ignacio"
+          target="_blank"
+          class="footer__social-link"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="mailto:ignacio@example.com" class="footer__social-link">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/eb74386eaa.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
